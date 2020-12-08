@@ -1,0 +1,351 @@
+body {
+  background-color: #F9F9F9;
+}
+
+.title {
+  color: #4E4E4E;
+  text-align: left;
+  font-size: 70px;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: 40%;
+  margin-left: 30%;
+}
+
+.subtitle {
+  color: #4E4E4E;
+  text-align: left;
+  font-size: 25px;
+  font-family: Arial;
+  margin-top: 7%;
+  margin-left: 30%;
+}
+
+.small-title {
+  margin-top: 35%;
+  margin-left: 15%;
+  width: 70%;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 114%;
+
+  display: flex;
+  align-items: center;
+
+  color: #4E4E4E;
+}
+
+.description {
+  margin-top: 15%;
+  margin-left: 15%;
+  width: 70%;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 152%;
+
+  letter-spacing: -0.01em;
+
+  color: #4E4E4E;
+}
+
+img.start-table {
+  margin-top: 5%;
+  margin-right: -2%;
+  height: 80%;
+  width: 90%;
+}
+
+#game {
+	margin: 0px;
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 51%;
+  font-family: Arial;
+  color: #4E4E4E;
+  max-width: 10%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.col-lg {
+  min-width: 67%;
+}
+
+.col-sm {
+  max-width: 33%;
+}
+
+.col-sm.white {
+  max-width: 33%;
+  background-color: #FFFFFF;
+}
+
+.row {
+  height: 100%;
+}
+
+.next-button {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 155%;
+
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  width: 70%;
+  position: absolute;
+  margin-left: 15%;
+  top: 80%;
+  background: #4E4E4E;
+  border-color: #4E4E4E;
+  border-radius: 12px;
+}
+.next-button:hover {
+  background: grey;
+  border-color:grey;
+  color: #FFFFFF;
+}
+.next-button[disabled]:hover {
+  background: #4E4E4E;
+  border-color: #4E4E4E;
+  color: #FFFFFF;
+}
+.next-button:focus {
+  background: grey;
+  box-shadow: 0 0 black;
+  color: #FFFFFF;
+}
+
+.freepik {
+  font-size: 10px;
+  color: #4E4E4E;
+}
+
+/* dishes */
+
+.img-container {
+  position:relative;
+  display:inline-block;
+}
+.img-container .overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 300ms ease-in-out;
+}
+.img-container:hover .overlay{
+  opacity:1;
+}
+.img-container:hover span.checkmark{
+  opacity:0;
+}
+.img-container:hover .img{
+  filter: brightness(40%);
+}
+.selected .img{
+  filter: brightness(55%);
+}
+.selected span.checkmark{
+  position:absolute;
+  top:47%;
+  left:49%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  font-size: 70px;
+}
+.img {
+  height:100% 
+}
+.overlay span{
+  position:absolute;
+  top:47%;
+  left:49%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* row 1 */
+
+#salad {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  height: 15%;
+}
+
+#paella {
+  position: absolute;
+  top: 15%;
+  left: 36%;
+  height: 15%;
+}
+
+#eggs-benedict {
+  position: absolute;
+  top: 15%;
+  left: 52%;
+  height: 15%;
+}
+
+#grilled-fish {
+  position: absolute;
+  top: 15%;
+  left: 68%;
+  height: 15%;
+}
+
+#pasta {
+  position: absolute;
+  top: 15%;
+  left: 84%;
+  height: 15%;
+}
+
+/* row 2 */
+#donuts {
+  position: absolute;
+  top: 34%;
+  left: 20%;
+  height: 15%;
+}
+
+#tempura {
+  position: absolute;
+  top: 34%;
+  left: 36%;
+  height: 15%;
+}
+
+#sushi {
+  position: absolute;
+  top: 34%;
+  left: 52%;
+  height: 15%;
+}
+
+#burrito {
+  position: absolute;
+  top: 34%;
+  left: 68%;
+  height: 15%;
+}
+
+#fruits {
+  position: absolute;
+  top: 34%;
+  left: 84%;
+  height: 15%;
+}
+
+/* row 3 */
+#rolls {
+  position: absolute;
+  top: 53%;
+  left: 20%;
+  height: 15%;
+}
+
+#burger-fries {
+  position: absolute;
+  top: 53%;
+  left: 34%;
+  height: 15%;
+}
+
+#ramen {
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  height: 15%;
+}
+
+#soup {
+  position: absolute;
+  top: 53%;
+  left: 68%;
+  height: 15%;
+}
+
+#dumplings {
+  position: absolute;
+  top: 53%;
+  left: 84%;
+  height: 15%;
+}
+
+/* row 4 */
+#bagel-sandwich {
+  position: absolute;
+  top: 72%;
+  left: 20%;
+  height: 15%;
+}
+
+#curry {
+  position: absolute;
+  top: 72%;
+  left: 36%;
+  height: 15%;
+}
+
+#pizza {
+  position: absolute;
+  top: 72%;
+  left: 52%;
+  height: 15%;
+}
+
+#falafel {
+  position: absolute;
+  top: 72%;
+  left: 68%;
+  height: 15%;
+}
+
+#pancakes {
+  position: absolute;
+  top: 72%;
+  left: 84%;
+  height: 15%;
+}
+
+/* gameplay */
+.score {
+  position: relative;
+  top: 6%;
+  font-family: Arial;
+  color: #4E4E4E;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

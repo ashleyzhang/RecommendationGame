@@ -1,0 +1,153 @@
+<head>
+  <title>keep your options open</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="javascript/actions.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm white">
+        <p class="small-title">Pick 3 dishes you don’t want</p>
+        <p class="description">
+          Pick dishes that you don’t want to get recommended. 
+          <br /><br />
+          You will be deducted a point for each unwanted dish that remains on the table at the end of the game.
+        </p>
+        <button class="btn next-button" disabled>Start the game</button>
+      </div>
+
+      <div class="col-lg">
+        <div class="img-container" id="salad">
+          <img class="img" src="images/salad.png" alt="salad">
+          <div class="overlay">
+            <span>Salad</span>
+          </div>
+        </div>
+        <div class="img-container" id="paella">
+          <img class="img" src="images/paella.png" alt="paella">
+          <div class="overlay">
+            <span>Paella</span>
+          </div>
+        </div>
+        <div class="img-container" id="eggs-benedict">
+          <img class="img" src="images/eggs_benedict.png" alt="eggs benedict">
+          <div class="overlay">
+            <span>Eggs Benedict</span>
+          </div>
+        </div>
+        <div class="img-container" id="grilled-fish">
+          <img class="img" src="images/grilled_fish.png" alt="grilled salmon">
+          <div class="overlay">
+            <span>Grilled Salmon</span>
+          </div>
+        </div>
+        <div class="img-container" id="pasta">
+          <img class="img" src="images/pasta.png" alt="tomato pasta">
+          <div class="overlay">
+            <span>Tomato Pasta</span>
+          </div>
+        </div>
+
+        <div class="img-container" id="donuts">
+          <img class="img" src="images/donuts.png" alt="donuts">
+          <div class="overlay">
+            <span>Donuts</span>
+          </div>
+        </div>
+        <div class="img-container" id="tempura">
+          <img class="img" src="images/tempura.png" alt="tempura">
+          <div class="overlay">
+            <span>Tempura</span>
+          </div>
+        </div>
+        <div class="img-container" id="sushi">
+          <img class="img" src="images/sushi.png" alt="sushi">
+          <div class="overlay">
+            <span>Sushi</span>
+          </div>
+        </div>
+        <div class="img-container" id="burrito">
+          <img class="img" src="images/burrito.png" alt="beef burrito">
+          <div class="overlay">
+            <span>Beef Burrito</span>
+          </div>
+        </div>
+        <div class="img-container" id="fruits">
+          <img class="img" src="images/fruits.png" alt="fruits">
+          <div class="overlay">
+            <span>Fruits</span>
+          </div>
+        </div>
+
+        <div class="img-container" id="rolls">
+          <img class="img" src="images/rolls.png" alt="california rolls">
+          <div class="overlay">
+            <span>California Rolls</span>
+          </div>
+        </div>
+        <div class="img-container" id="burger-fries">
+          <img class="img" src="images/burger_fries.png" alt="burger and fries">
+          <div class="overlay">
+            <span>Burger & Fries</span>
+          </div>
+        </div>
+        <div class="img-container" id="ramen">
+          <img class="img" src="images/ramen.png" alt="ramen">
+          <div class="overlay">
+            <span>Ramen</span>
+          </div>
+        </div>
+        <div class="img-container" id="soup">
+          <img class="img" src="images/soup.png" alt="onion soup">
+          <div class="overlay">
+            <span>Onion Soup</span>
+          </div>
+        </div>
+        <div class="img-container" id="dumplings">
+          <img class="img" src="images/dumplings.png" alt="steamed dumplings">
+          <div class="overlay">
+            <span>Steamed Dumplings (Meat)</span>
+          </div>
+        </div>
+
+        <div class="img-container" id="bagel-sandwich">
+          <img class="img" src="images/bagel_sandwich.png" alt="bagel egg sandwich">
+          <div class="overlay">
+            <span>Bagel Egg Sandwich</span>
+          </div>
+        </div>
+        <div class="img-container" id="curry">
+          <img class="img" src="images/curry.png" alt="chicken curry">
+          <div class="overlay">
+            <span>Chicken Curry</span>
+          </div>
+        </div>
+        <div class="img-container" id="pizza">
+          <img class="img" src="images/pizza.png" alt="pepperoni pizza">
+          <div class="overlay">
+            <span>Pepperoni Pizza</span>
+          </div>
+        </div>
+        <div class="img-container" id="falafel">
+          <img class="img" src="images/falafel.png" alt="falafel">
+          <div class="overlay">
+            <span>Falafel</span>
+          </div>
+        </div>
+        <div class="img-container" id="pancakes">
+          <img class="img" src="images/pancakes.png" alt="pancakes">
+          <div class="overlay">
+            <span>Pancakes</span>
+          </div>
+        </div>
+
+        <h1 class="score float-right">Hover over a dish to see its name</h1>
+        <img class="start-table float-right" src="images/table.png" alt="table with plate and utensils">
+        <a href="http://www.freepik.com" class="freepik">Designed by Freepik</a>
+      </div>
+    </div>
+  </div>
+	<!-- <canvas id="game" width="500" height="500"></canvas> -->
+</body>
