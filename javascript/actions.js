@@ -385,10 +385,10 @@ $(document).ready(function(){
       } else if (questionNumber == maxNumQuestions) {
         generateRandomQuestion();
         $(".next-button").text("View Final Result");
-        $(".score").text(`Final Score: ${score}`);
         questionNumber += 1;
       } else {
         var new_html = "";
+        $(".score").text(`Final Score: ${score}`);
         if (score >= 10) {
           new_html =
             `<p class="final-score">Your final score: ${score}</p>
