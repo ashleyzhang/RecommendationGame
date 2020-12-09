@@ -373,18 +373,8 @@ $(document).ready(function(){
       $(".img-container").removeClass("selected");
       $(".checkmark").remove();
       $(".score").text(`Current Score: ${score}`);
-      var new_html = 
-        `<p class="small-title">Try keeping your options open</p>
-        <p class="description">
-          Your goal is to keep as many dishes on the table as possible, except the ones you don’t like.
-          <br /><br />
-          We will be impressed if you can score above 10.
-          <br /><br />
-          Good luck!
-        </p>
-        <button class="btn next-button">Start the game</button>
-      `;
-      $(".col-sm").empty().append(new_html);
+      generateRandomQuestion();
+      questionNumber += 1;
     } else {
       if (selection != undefined) {
         updateDishLocations();
@@ -394,7 +384,7 @@ $(document).ready(function(){
         questionNumber += 1;
       } else if (questionNumber == maxNumQuestions) {
         generateRandomQuestion();
-        $(".next-button").text("Final Result");
+        $(".next-button").text("View Final Result");
         $(".score").text(`Final Score: ${score}`);
         questionNumber += 1;
       } else {

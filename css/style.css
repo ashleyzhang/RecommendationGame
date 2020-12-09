@@ -43,7 +43,7 @@ body {
 }
 
 .description {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 15%;
   width: 70%;
 
@@ -71,7 +71,7 @@ body {
 
 .final-score {
   position: relative;
-  top: 15%;
+  top: 17%;
   left: 15%;
   width: 65%;
 
@@ -109,21 +109,21 @@ body {
   font-family: Arial;
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 37px;
   line-height: 48px;
 
   color: #4E4E4E;
 }
 
 .conclusion-subtitle {
-  width: 65%;
+  width: 64%;
   margin-left: 12%;
   margin-top: 5%;
 
   font-family: Arial;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 38px;
 
   color: #4E4E4E;
@@ -202,7 +202,7 @@ img.bubble-img {
   width: 70%;
   position: absolute;
   left: 15%;
-  top: 80%;
+  top: 77%;
   background: #4E4E4E;
   border-color: #4E4E4E;
   border-radius: 12px;
@@ -228,19 +228,18 @@ img.bubble-img {
 .play-again {
   font-family: Arial;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   line-height: 100%;
 
   align-items: center;
   text-align: center;
 
-  color: #FFFFFF;
+  color: #4e4e4e;
 
-  width: 40%;
-  margin-left: 12%;
-  margin-top: 6%;
-  background: #4E4E4E;
+  width: 32%;
+  margin-right: 2%;
+  background: none;
   border-color: #4E4E4E;
   border-radius: 12px;
   padding-top: 1.5%;
@@ -250,6 +249,37 @@ img.bubble-img {
   background: grey;
   border-color:grey;
   color: #FFFFFF;
+}
+
+.learn-more {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  width: 32%;
+  margin-right: 2%;
+  background: #4E4E4E;
+  border-color: #4E4E4E;
+  border-radius: 12px;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+.learn-more:hover {
+  background: grey;
+  border-color:grey;
+  color: #FFFFFF;
+}
+
+.tpbutton {
+  margin-left: 12%;
+  margin-top: 10%;
 }
 
 .answer {
