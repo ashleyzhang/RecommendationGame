@@ -296,12 +296,12 @@ function generateRandomQuestion() {
     question = "Which of these flavors of food are you more likely to choose?";
     options = generateSubset(flavors, 2);
   } else if (random < 9) {
+    question = "Which meal is your favorite?";
+    options = generateSubset(meals, 2);
+  } else if (random < 10) {
     leastFav = true;
     question = "Which of the following foods is your least favorite?";
     options = generateSubset(dishes, 3);
-  } else if (random < 10) {
-    question = "Which meal is your favorite?";
-    options = generateSubset(meals, 2);
   } else if (random < 11) {
     question = "If you could only eat one of the following foods for the rest of your life, which would it be?"
     options = generateSubset(dishes, 3);
