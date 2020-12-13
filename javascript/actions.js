@@ -132,21 +132,23 @@ function updateDishValues() {
   if (dishes.includes(selection)) {
     var multiple = 1;
     if (leastFav) {
-      multiple = -1;
+      multiple = -0.5;
     }
-    var normalizer = 10;
-    var allTags = cuisines + meals + flavors + temperature + factors;
+    var normalizer = 5;
+    var allTags = cuisines.concat(meals).concat(flavors).concat(temperature).concat(factors);
     for (var i = 0; i < dishes.length; i++) {
       var id = dishIds[dishes[i]];
       var numSame = 0;
       for (var t = 0; t < allTags.length; t++) {
         var tag = allTags[t];
-        if (tags[dishes[i]][tag] == tags[selection][tag] && tags[dishes[i]][tag] != -1) {
+        if (tags[dishes[i]][tag] == tags[selection][tag]) {
           numSame += 1;
+        } else {
+          numSame -= 1;
         }
       }
       if (dishValues[id] != undefined) {
-        dishValues[id] += 0.5 * multiple * (numSame / normalizer);
+        dishValues[id] += multiple * (numSame / normalizer);
         if (dishValues[id] > threshold) {
           dishValues[id] = threshold;
         }
@@ -155,13 +157,15 @@ function updateDishValues() {
       for (var t = 0; t < allTags.length; t++) {
         var tag = allTags[t];
         for (var j = 0; j < options.length; j++) {
-          if (tags[dishes[i]][tag] == tags[options[j]][tag] && tags[dishes[i]][tag] != -1) {
+          if (tags[dishes[i]][tag] == tags[options[j]][tag]) {
             numSame += 1;
+          } else {
+            numSame -= 1;
           }
         }
       }
       if (dishValues[id] != undefined) {
-        dishValues[id] -= (2 / dishes.length) * multiple * (numSame / normalizer);
+        dishValues[id] -= (1 / dishes.length) * multiple * (numSame / normalizer);
         if (dishValues[id] > threshold) {
           dishValues[id] = threshold;
         }
@@ -170,11 +174,10 @@ function updateDishValues() {
   } else {
     $.each(dishValues, function( dish, _ ) {
       if (dishValues[dish] != undefined) {
-        console.log(dish);
         dishValues[dish] += 2 * tags[actualNames[dish]][selection];
         for (var i = 0; i < options.length; i++) {
           if (options[i] != selection) {
-            dishValues[dish] -= (2 / options.length) * tags[actualNames[dish]][options[i]];
+            dishValues[dish] -= (1.5 / options.length) * tags[actualNames[dish]][options[i]];
           }
         }
         if (dishValues[id] > threshold) {
@@ -209,7 +212,6 @@ function getRandomGoalPoint() {
 
 function updateDishLocations() {
   updateDishValues();
-  console.log(dishValues);
   $.each(dishValues, function( dish, val ) {
     if (dishValues[dish] != undefined) {
       // higher value means closer to center
