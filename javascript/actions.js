@@ -141,7 +141,7 @@ function updateDishValues() {
       var numSame = 0;
       for (var t = 0; t < allTags.length; t++) {
         var tag = allTags[t];
-        if (tags[dishes[i]][tag] == tags[selection][tag]) {
+        if (tags[dishes[i]][tag] == tags[selection][tag] && tags[dishes[i]][tag] != -1) {
           numSame += 1;
         }
       }
@@ -155,7 +155,7 @@ function updateDishValues() {
       for (var t = 0; t < allTags.length; t++) {
         var tag = allTags[t];
         for (var j = 0; j < options.length; j++) {
-          if (tags[dishes[i]][tag] == tags[options[j]][tag]) {
+          if (tags[dishes[i]][tag] == tags[options[j]][tag] && tags[dishes[i]][tag] != -1) {
             numSame += 1;
           }
         }
